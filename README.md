@@ -38,6 +38,8 @@ Banks need to identify which customers are most likely to accept a marketing off
 * Customer behavior is strongly influenced by past interactions and campaign intensity
 * Ensemble models (Random Forest) provide better predictive performance
 * Adjusting classification threshold improves business outcomes
+* Targeting top 20% high-probability customers can significantly improve campaign efficiency
+* Model comparison shows trade-off between interpretability (logistic regression) and performance (random forest)
 
 ## Project Structure
 
