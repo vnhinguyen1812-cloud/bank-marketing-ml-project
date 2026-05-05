@@ -1,61 +1,66 @@
-# Bank Marketing Machine Learning Project
+# Bank Marketing Optimization using Machine Learning
+## 1. Business Problem
+Banks invest heavily in outbound marketing campaigns (phone calls), but low conversion rates lead to inefficient resource allocation and high operational costs.
 
-## Project Overview
+The key challenge is:
+> How can the bank identify high-potential customers and improve campaign efficiency without increasing cost?
 
-This project applies machine learning techniques to predict customer responses to a bank marketing campaign. The goal is to help the bank improve customer engagement and optimize marketing strategies.
+## 2. Objective
+This project aims to:
 
-## Business Problem
+- Predict customer likelihood to subscribe to a term deposit
+- Optimize customer targeting strategy
+- Improve conversion rate while reducing unnecessary outreach
 
-Banks need to identify which customers are most likely to accept a marketing offer (open a new account). Predicting this behavior helps:
+## 3. Key Insights
+- **Campaign fatigue effect**: Customers contacted more frequently are less likely to convert  
+- **Customer history matters**: Previous successful interactions significantly increase conversion probability  
+- **Strong segmentation opportunity**: Top predicted customers show significantly higher response rates (high lift)  
+- **Macroeconomic factors** (e.g., interest rates) also influence customer decisions  
 
-* Increase conversion rate
-* Reduce marketing costs
-* Improve customer targeting
+## 4. Modeling Approach
+Three models were developed and compared:
 
-## Dataset
+- Logistic Regression (baseline, interpretable)
+- Decision Tree (business-friendly rules)
+- Random Forest (best predictive performance)
 
-* Source: Bank Marketing Dataset (Kaggle-based)
-* ~40,000 customers
-* 20+ features (demographics, financial status, campaign data)
-* Target variable: Customer response (Yes/No)
+SMOTE was applied to address class imbalance.
 
-## Methods Used
+## 5. Results
+- Random Forest achieved the highest predictive performance (AUC)
+- Logistic Regression provides strong interpretability for business insights
+- Optimal classification threshold (~0.35) improves recall of high-value customers
+- Top customer segments show significantly higher conversion rates (based on lift analysis)
 
-* Logistic Regression
-* Decision Tree (with pruning)
-* Random Forest (ensemble method)
-* SMOTE for class imbalance handling
+## 6. Business Recommendation
+Based on model results:
 
-## Model Evaluation
+- **Prioritize top 30–40% high-probability customers** for marketing campaigns  
+- **Reduce outreach to low-probability segments** to save cost  
+- **Leverage customer history** to refine targeting strategy  
+- **Optimize campaign frequency** to avoid over-contacting customers  
 
-* Accuracy
-* ROC-AUC
-* Brier Score
-* Lift Analysis (business-focused metric)
+## 7. Business Impact (Estimated)
+Applying the model-driven targeting strategy can:
 
-## Key Insights
+- Reduce marketing costs by limiting low-value calls  
+- Increase conversion efficiency by focusing on high-probability customers  
+- Improve overall ROI of marketing campaigns  
 
-* Customer behavior is strongly influenced by past interactions and campaign intensity
-* Ensemble models (Random Forest) provide better predictive performance
-* Adjusting classification threshold improves business outcomes
-* Targeting top 20% high-probability customers can significantly improve campaign efficiency
-* Model comparison shows trade-off between interpretability (logistic regression) and performance (random forest)
+## 8. Project Structure
+- `data/` → dataset  
+- `code/` → R scripts (data preprocessing, modeling, evaluation)  
+- `report/` → project proposal & final report  
+- `presentation/` → slides  
 
-## Project Structure
+## 9. How to Run
+1. Open R scripts in `code/`  
+2. Load dataset from `data/`  
+3. Run scripts sequentially  
 
-* `data/` → dataset
-* `code/` → R scripts
-* `report/` → project proposal & final report
-* `presentation/` → slides
 
-## How to Run
 
-1. Open the R script in `code/`
-2. Load dataset from `data/`
-3. Run the script step-by-step
-
-## Author
+## 10. Author
 
 Nguyễn Hoàng Vân Nhi
-
-
